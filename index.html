@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+  <meta charset="UTF-8">
+  <title>Electrician Express</title>
+</head>
+<body>
+
+  <iframe src="https://electricalexpress-db2400.ingress-erytho.ewp.live"></iframe>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    function loadRemoteContent(url) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          var content = xhr.responseText;
+          // Вставте вміст у поточну сторінку
+          $(document.body).append(content);
+        }
+      };
+      xhr.send();
+    }
+
+    loadRemoteContent("https://electricalexpress-db2400.ingress-erytho.ewp.live");
+  </script>
+
+</body>
+</html>
